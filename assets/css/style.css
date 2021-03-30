@@ -856,3 +856,12 @@ blockquote p::after {
   width: 263px;
   height: 175px;
 }
+
+
+/* 310 px */
+
+@media screen and (max-width: 375px) {
+     .img-height {
+      height:310px;
+     }
+}
