@@ -860,7 +860,7 @@ blockquote p::after {
 
 /* 310 px */
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
      .img-height {
       height:310px;
      }
