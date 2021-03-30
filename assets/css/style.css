@@ -248,7 +248,7 @@ body {
 /* =================== Header Style Starts Here =================== */
 header {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  background-color: #FFF;
+  background-color: #c88800;
   width: 100%;
   z-index: 99; }
   header .logo {
@@ -292,7 +292,7 @@ header {
         margin-left: 5px; }
   header .header-bottom {
     padding: 6px;
-    background-color: #fff; }
+    background-color:  #c88800; }
     @media screen and (max-width: 991px) {
       header .header-bottom {
         padding: 0px; } }
@@ -321,11 +321,11 @@ header {
           width: 100%;
           padding: 10px; } }
       header .nav-col .navbad li a {
-        color: #686968 !important;
-        border: 1px solid #CCC;
+        color: #110000 !important;
+        border: 1px solid #110000;
         border-radius: 50px; }
         header .nav-col .navbad li a:hover {
-          background-color: #3cc88f;
+          background-color: #c88800;
           color: #fff !important; }
     header .nav-col .navbad .nav-btn {
       float: right; }
@@ -362,7 +362,7 @@ header {
 
 .slider-captions {
   position: absolute;
-  bottom: 132px;
+  bottom: 550px;
   text-align: center; }
 
 @media screen and (max-width: 1050px) {
@@ -711,7 +711,7 @@ header {
         width: 100%; }
       .our-team .team-row .single-usr .det-o {
         padding: 20px;
-        background-color: #3cc88f; }
+        background-color: #c88800; }
         .our-team .team-row .single-usr .det-o h4 {
           color: #FFF;
           margin-bottom: 0px;
@@ -793,3 +793,66 @@ header {
   margin-bottom: 30px; }
 
 /*# sourceMappingURL=style.css.map */
+
+.no-indent {
+  text-indent: 0px !important;
+}
+
+.text-color {
+  color: #c88800;
+}
+
+.pad-left {
+  padding-left: 50px;
+}
+
+blockquote {
+  margin: 0;
+}
+
+blockquote p {
+  padding: 15px;
+  border-radius: 5px;
+}
+
+blockquote p::before {
+  content: '\201C';
+}
+
+blockquote p::after {
+  content: '\201D';
+}
+
+.quote-string {
+  font-weight: 200;
+    font-size: 70px;
+    text-align: center;
+    line-height: 70px;
+    font-style: italic;
+    margin-top: 80px;
+}
+
+.slider .owl-nav .owl-prev, .slider .owl-nav .owl-next {
+  color: #c88800 !important;
+  border: 2px solid #c88800 !important;
+}
+
+.slider .owl-dots .owl-dot span {
+  border: 2px solid #c88800 !important;
+}
+
+.img-style {
+  width: 263px;
+  height: 288px !important;
+}
+
+.lives-img {
+  width: 360px;
+  height: 360px;
+}
+
+
+.gallery-img {
+  width: 263px;
+  height: 175px;
+}
