@@ -134,59 +134,59 @@
                     <div class = "row" style = "margin-top: 60px;">
                     <div class="col-md-3">
                             <!-- Load Stripe.js on your website. -->
-                            <script src="https://js.stripe.com/v3"></script>
+                                <script src="https://js.stripe.com/v3"></script>
 
-                            <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
-                            <button
-                            style="background-color:#6772E5;color:#FFF;padding:8px 25px;border:0;border-radius:4px;font-size:1em;cursor:pointer"
-                            id="checkout-button-price_1JNYs0SH6qOSucXzxVhlpFJl"
-                            role="link"
-                            type="button"
-                            >
-                            Rs. 2000
-                            </button>
+                                <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+                                <button
+                                style="background-color:#6772E5;color:#FFF;padding:8px 25px;border:0;border-radius:4px;font-size:1em;cursor:pointer"
+                                id="checkout-button-price_1JNYs0SH6qOSucXzxVhlpFJl"
+                                role="link"
+                                type="button"
+                                >
+                                Rs. 2000
+                                </button>
 
-                            <div id="error-message"></div>
+                                <div id="error-message"></div>
 
-                            <script>
-                            (function() {
-                            var stripe = Stripe('');
+                                <script>
+                                (function() {
+                                var stripe = Stripe('pk_live_51JMySoSH6qOSucXzP7kjLfHR8H2MVvXpOhUP1Y3Nx67MvBzIsCnb411v5ce9EECu2IDr3EnCaBHeOL04GuCfSvZE00w4m5Ayb5');
 
-                            var checkoutButton = document.getElementById('checkout-button-price_1JNYs0SH6qOSucXzxVhlpFJl');
-                            checkoutButton.addEventListener('click', function () {
-                                /*
-                                * When the customer clicks on the button, redirect
-                                * them to Checkout.
-                                */
-                                stripe.redirectToCheckout({
-                                lineItems: [{price: 'price_1JNYs0SH6qOSucXzxVhlpFJl', quantity: 1}],
-                                mode: 'payment',
-                                /*
-                                * Do not rely on the redirect to the successUrl for fulfilling
-                                * purchases, customers may not always reach the success_url after
-                                * a successful payment.
-                                * Instead use one of the strategies described in
-                                * https://stripe.com/docs/payments/checkout/fulfill-orders
-                                */
-                                successUrl: 'https://suhanimemorialtrust.com/success.html',
-                                cancelUrl: 'https://suhanimemorialtrust.com/canceled.html',
-                                })
-                                .then(function (result) {
-                                if (result.error) {
+                                var checkoutButton = document.getElementById('checkout-button-price_1JNYs0SH6qOSucXzxVhlpFJl');
+                                checkoutButton.addEventListener('click', function () {
                                     /*
-                                    * If `redirectToCheckout` fails due to a browser or network
-                                    * error, display the localized error message to your customer.
+                                    * When the customer clicks on the button, redirect
+                                    * them to Checkout.
                                     */
-                                    var displayError = document.getElementById('error-message');
-                                    displayError.textContent = result.error.message;
-                                }
+                                    stripe.redirectToCheckout({
+                                    lineItems: [{price: 'price_1JNYs0SH6qOSucXzxVhlpFJl', quantity: 1}],
+                                    mode: 'payment',
+                                    /*
+                                    * Do not rely on the redirect to the successUrl for fulfilling
+                                    * purchases, customers may not always reach the success_url after
+                                    * a successful payment.
+                                    * Instead use one of the strategies described in
+                                    * https://stripe.com/docs/payments/checkout/fulfill-orders
+                                    */
+                                    successUrl: 'https://suhanimemorialtrust.com/success.html',
+                                    cancelUrl: 'https://suhanimemorialtrust.com/canceled.html',
+                                    })
+                                    .then(function (result) {
+                                    if (result.error) {
+                                        /*
+                                        * If `redirectToCheckout` fails due to a browser or network
+                                        * error, display the localized error message to your customer.
+                                        */
+                                        var displayError = document.getElementById('error-message');
+                                        displayError.textContent = result.error.message;
+                                    }
+                                    });
                                 });
-                            });
-                            })();
-                            </script>
+                                })();
+                                </script>
                     </div>
                     <div class = "col-md-3">
-                       <!-- Load Stripe.js on your website. -->
+                      <!-- Load Stripe.js on your website. -->
                             <script src="https://js.stripe.com/v3"></script>
 
                             <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
@@ -240,57 +240,57 @@
                     </div>
 
                     <div class = "col-md-3">
-                        <!-- Load Stripe.js on your website. -->
-                            <script src="https://js.stripe.com/v3"></script>
+                       <!-- Load Stripe.js on your website. -->
+                                <script src="https://js.stripe.com/v3"></script>
 
-                            <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
-                            <button
-                            style="background-color:#6772E5;color:#FFF;padding:8px 25px;border:0;border-radius:4px;font-size:1em;cursor:pointer"
-                            id="checkout-button-price_1JNYrjSH6qOSucXzbvNbnyWg"
-                            role="link"
-                            type="button"
-                            >
-                            Rs. 10000
-                            </button>
+                                <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+                                <button
+                                style="background-color:#6772E5;color:#FFF;padding:8px 25px;border:0;border-radius:4px;font-size:1em;cursor:pointer"
+                                id="checkout-button-price_1JNYrjSH6qOSucXzbvNbnyWg"
+                                role="link"
+                                type="button"
+                                >
+                                Rs. 10000
+                                </button>
 
-                            <div id="error-message"></div>
+                                <div id="error-message"></div>
 
-                            <script>
-                            (function() {
-                            var stripe = Stripe('pk_live_51JMySoSH6qOSucXzP7kjLfHR8H2MVvXpOhUP1Y3Nx67MvBzIsCnb411v5ce9EECu2IDr3EnCaBHeOL04GuCfSvZE00w4m5Ayb5');
+                                <script>
+                                (function() {
+                                var stripe = Stripe('pk_live_51JMySoSH6qOSucXzP7kjLfHR8H2MVvXpOhUP1Y3Nx67MvBzIsCnb411v5ce9EECu2IDr3EnCaBHeOL04GuCfSvZE00w4m5Ayb5');
 
-                            var checkoutButton = document.getElementById('checkout-button-price_1JNYrjSH6qOSucXzbvNbnyWg');
-                            checkoutButton.addEventListener('click', function () {
-                                /*
-                                * When the customer clicks on the button, redirect
-                                * them to Checkout.
-                                */
-                                stripe.redirectToCheckout({
-                                lineItems: [{price: 'price_1JNYrjSH6qOSucXzbvNbnyWg', quantity: 1}],
-                                mode: 'payment',
-                                /*
-                                * Do not rely on the redirect to the successUrl for fulfilling
-                                * purchases, customers may not always reach the success_url after
-                                * a successful payment.
-                                * Instead use one of the strategies described in
-                                * https://stripe.com/docs/payments/checkout/fulfill-orders
-                                */
-                                successUrl: 'https://suhanimemorialtrust.com/success.html',
-                                cancelUrl: 'https://suhanimemorialtrust.com/canceled.html',
-                                })
-                                .then(function (result) {
-                                if (result.error) {
+                                var checkoutButton = document.getElementById('checkout-button-price_1JNYrjSH6qOSucXzbvNbnyWg');
+                                checkoutButton.addEventListener('click', function () {
                                     /*
-                                    * If `redirectToCheckout` fails due to a browser or network
-                                    * error, display the localized error message to your customer.
+                                    * When the customer clicks on the button, redirect
+                                    * them to Checkout.
                                     */
-                                    var displayError = document.getElementById('error-message');
-                                    displayError.textContent = result.error.message;
-                                }
+                                    stripe.redirectToCheckout({
+                                    lineItems: [{price: 'price_1JNYrjSH6qOSucXzbvNbnyWg', quantity: 1}],
+                                    mode: 'payment',
+                                    /*
+                                    * Do not rely on the redirect to the successUrl for fulfilling
+                                    * purchases, customers may not always reach the success_url after
+                                    * a successful payment.
+                                    * Instead use one of the strategies described in
+                                    * https://stripe.com/docs/payments/checkout/fulfill-orders
+                                    */
+                                    successUrl: 'https://suhanimemorialtrust.com/success.html',
+                                    cancelUrl: 'https://suhanimemorialtrust.com/canceled.html',
+                                    })
+                                    .then(function (result) {
+                                    if (result.error) {
+                                        /*
+                                        * If `redirectToCheckout` fails due to a browser or network
+                                        * error, display the localized error message to your customer.
+                                        */
+                                        var displayError = document.getElementById('error-message');
+                                        displayError.textContent = result.error.message;
+                                    }
+                                    });
                                 });
-                            });
-                            })();
-                            </script>
+                                })();
+                                </script>
                     </div>
 
 
