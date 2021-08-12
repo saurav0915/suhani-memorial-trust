@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Suhani Memorial Trust</title>
+    <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/images/fav.jpg">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/plugins/slider/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/plugins/slider/css/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <header class="continer-fluid ">
+        <div  class="header-top">
+            <div class="container">
+                <div class="row col-det">
+                    <div class="col-lg-6 d-none d-lg-block">
+                        <ul class="ulleft">
+                            <li>
+                                <i class="far fa-envelope"></i>
+                                suhanimemorialtrust@gmail.com
+                                <span>|</span></li>
+                            <li>
+                                <i class="fas fa-phone-volume"></i>
+                                +91 9911964701</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 folouws">
+                      
+                        <ul class="ulright">
+                           <li> <small>Folow Us </small>:</li>
+                            <li>
+                                <i class="fab fa-facebook-square"></i>
+                            </li>
+                            <!-- <li>
+                                <i class="fab fa-twitter-square"></i>
+                            </li> -->
+                            <li>
+                                <i class="fab fa-instagram"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 d-none d-md-block col-md-6 btn-bhed">
+                        <!-- <button class="btn btn-sm btn-success">Join Us</button> -->
+                        <form action = "donate.html">
+                            <button class="btn btn-sm btn-default">Donate</button>
+                            </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="menu-jk" class="header-bottom">
+            <div class="container">
+                <div class="row nav-row">
+                    <div class="col-lg-3 col-md-12 logo">
+                        <a href="index.html">
+                            <img src="assets/images/app_logo.jpeg" alt="">
+                            <a data-toggle="collapse" data-target="#menu" href="#menu"><i
+                                    class="fas d-block d-lg-none  small-menu fa-bars"></i></a>
+                        </a>
+
+                    </div>
+                    <div id="menu" class="col-lg-9 col-md-12 d-none d-lg-block nav-col">
+
+                        <ul class="navbad">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.html">Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about_us.html">Our Story</a>
+                            </li>
+                            <!-- <li class="nav-item">
+                                    <a class="nav-link" href="services.html">Services</a>
+                                </li> -->
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="gallery.html">Gallery</a>
+                            </li>
+
+                            <!-- <li class="nav-item">
+                                    <a class="nav-link" href="blog.html">Blog</a>
+                                </li> -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact_us.html">Contact US</a>
+                            </li>
+
+
+
+
+                        </ul>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--  ************************* Page Title Starts Here ************************** -->
+
+    <div class="page-nav no-margin row">
+        <div class="container">
+            <div class="row">
+                <h2>Donate</h2>
+                <!-- <ul>
+                    <li> <a href="#"><i class="fas fa-home"></i> Home</a></li>
+                    <li><i class="fas fa-angle-double-right"></i> Contact US</li>
+                </ul> -->
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--  ************************* Contact Us Starts Here ************************** -->
+
+    <div class="row contact-rooo no-margin">
+        <div class="container">
+            <div class="row">
+
+
+                <div style="padding:20px" class="col-sm-7">
+                    <h2 style = "margin-top: 20px;margin-bottom: -15px;">Donate</h2> 
+
+                    <div class = "row" style = "margin-top: 60px;">
+                    <div class="col-md-3">
+                            <!-- Load Stripe.js on your website. -->
+                            <script src="https://js.stripe.com/v3"></script>
+
+                            <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+                            <button
+                            style="background-color:#6772E5;color:#FFF;padding:8px 25px;border:0;border-radius:4px;font-size:1em;cursor:pointer"
+                            id="checkout-button-price_1JNYs0SH6qOSucXzxVhlpFJl"
+                            role="link"
+                            type="button"
+                            >
+                            Rs. 2000
+                            </button>
+
+                            <div id="error-message"></div>
+
+                            <script>
+                            (function() {
+                            var stripe = Stripe('');
+
+                            var checkoutButton = document.getElementById('checkout-button-price_1JNYs0SH6qOSucXzxVhlpFJl');
+                            checkoutButton.addEventListener('click', function () {
+                                /*
+                                * When the customer clicks on the button, redirect
+                                * them to Checkout.
+                                */
+                                stripe.redirectToCheckout({
+                                lineItems: [{price: 'price_1JNYs0SH6qOSucXzxVhlpFJl', quantity: 1}],
+                                mode: 'payment',
+                                /*
+                                * Do not rely on the redirect to the successUrl for fulfilling
+                                * purchases, customers may not always reach the success_url after
+                                * a successful payment.
+                                * Instead use one of the strategies described in
+                                * https://stripe.com/docs/payments/checkout/fulfill-orders
+                                */
+                                successUrl: 'https://suhanimemorialtrust.com/success.html',
+                                cancelUrl: 'https://suhanimemorialtrust.com/canceled.html',
+                                })
+                                .then(function (result) {
+                                if (result.error) {
+                                    /*
+                                    * If `redirectToCheckout` fails due to a browser or network
+                                    * error, display the localized error message to your customer.
+                                    */
+                                    var displayError = document.getElementById('error-message');
+                                    displayError.textContent = result.error.message;
+                                }
+                                });
+                            });
+                            })();
+                            </script>
+                    </div>
+                    <div class = "col-md-3">
+                       <!-- Load Stripe.js on your website. -->
+                            <script src="https://js.stripe.com/v3"></script>
+
+                            <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+                            <button
+                            style="background-color:#6772E5;color:#FFF;padding:8px 25px;border:0;border-radius:4px;font-size:1em;cursor:pointer"
+                            id="checkout-button-price_1JNYrtSH6qOSucXz5FENMQWD"
+                            role="link"
+                            type="button"
+                            >
+                            Rs. 5000
+                            </button>
+
+                            <div id="error-message"></div>
+
+                            <script>
+                            (function() {
+                            var stripe = Stripe('pk_live_51JMySoSH6qOSucXzP7kjLfHR8H2MVvXpOhUP1Y3Nx67MvBzIsCnb411v5ce9EECu2IDr3EnCaBHeOL04GuCfSvZE00w4m5Ayb5');
+
+                            var checkoutButton = document.getElementById('checkout-button-price_1JNYrtSH6qOSucXz5FENMQWD');
+                            checkoutButton.addEventListener('click', function () {
+                                /*
+                                * When the customer clicks on the button, redirect
+                                * them to Checkout.
+                                */
+                                stripe.redirectToCheckout({
+                                lineItems: [{price: 'price_1JNYrtSH6qOSucXz5FENMQWD', quantity: 1}],
+                                mode: 'payment',
+                                /*
+                                * Do not rely on the redirect to the successUrl for fulfilling
+                                * purchases, customers may not always reach the success_url after
+                                * a successful payment.
+                                * Instead use one of the strategies described in
+                                * https://stripe.com/docs/payments/checkout/fulfill-orders
+                                */
+                                successUrl: 'https://suhanimemorialtrust.com/success.html',
+                                cancelUrl: 'https://suhanimemorialtrust.com/canceled.html',
+                                })
+                                .then(function (result) {
+                                if (result.error) {
+                                    /*
+                                    * If `redirectToCheckout` fails due to a browser or network
+                                    * error, display the localized error message to your customer.
+                                    */
+                                    var displayError = document.getElementById('error-message');
+                                    displayError.textContent = result.error.message;
+                                }
+                                });
+                            });
+                            })();
+                            </script>
+                    </div>
+
+                    <div class = "col-md-3">
+                        <!-- Load Stripe.js on your website. -->
+                            <script src="https://js.stripe.com/v3"></script>
+
+                            <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+                            <button
+                            style="background-color:#6772E5;color:#FFF;padding:8px 25px;border:0;border-radius:4px;font-size:1em;cursor:pointer"
+                            id="checkout-button-price_1JNYrjSH6qOSucXzbvNbnyWg"
+                            role="link"
+                            type="button"
+                            >
+                            Rs. 10000
+                            </button>
+
+                            <div id="error-message"></div>
+
+                            <script>
+                            (function() {
+                            var stripe = Stripe('pk_live_51JMySoSH6qOSucXzP7kjLfHR8H2MVvXpOhUP1Y3Nx67MvBzIsCnb411v5ce9EECu2IDr3EnCaBHeOL04GuCfSvZE00w4m5Ayb5');
+
+                            var checkoutButton = document.getElementById('checkout-button-price_1JNYrjSH6qOSucXzbvNbnyWg');
+                            checkoutButton.addEventListener('click', function () {
+                                /*
+                                * When the customer clicks on the button, redirect
+                                * them to Checkout.
+                                */
+                                stripe.redirectToCheckout({
+                                lineItems: [{price: 'price_1JNYrjSH6qOSucXzbvNbnyWg', quantity: 1}],
+                                mode: 'payment',
+                                /*
+                                * Do not rely on the redirect to the successUrl for fulfilling
+                                * purchases, customers may not always reach the success_url after
+                                * a successful payment.
+                                * Instead use one of the strategies described in
+                                * https://stripe.com/docs/payments/checkout/fulfill-orders
+                                */
+                                successUrl: 'https://suhanimemorialtrust.com/success.html',
+                                cancelUrl: 'https://suhanimemorialtrust.com/canceled.html',
+                                })
+                                .then(function (result) {
+                                if (result.error) {
+                                    /*
+                                    * If `redirectToCheckout` fails due to a browser or network
+                                    * error, display the localized error message to your customer.
+                                    */
+                                    var displayError = document.getElementById('error-message');
+                                    displayError.textContent = result.error.message;
+                                }
+                                });
+                            });
+                            })();
+                            </script>
+                    </div>
+
+
+                       
+                    </div>
+                    <!-- <div class="row cont-row">
+                        <div  class="col-sm-3"><label>Enter Name </label><span>:</span></div>
+                        <div class="col-sm-8"><input type="text" placeholder="Enter Name" name="name" class="form-control input-sm"  ></div>
+                    </div>
+                    <div  class="row cont-row">
+                        <div  class="col-sm-3"><label>Email Address </label><span>:</span></div>
+                        <div class="col-sm-8"><input type="text" name="name" placeholder="Enter Email Address" class="form-control input-sm"  ></div>
+                    </div>
+                    <div  class="row cont-row">
+                        <div  class="col-sm-3"><label>Mobile Number</label><span>:</span></div>
+                        <div class="col-sm-8"><input type="text" name="name" placeholder="Enter Mobile Number" class="form-control input-sm"  ></div>
+                    </div>
+                    <div  class="row cont-row">
+                        <div  class="col-sm-3"><label>Enter Message</label><span>:</span></div>
+                        <div class="col-sm-8">
+                            <textarea rows="5" placeholder="Enter Your Message" class="form-control input-sm"></textarea>
+                        </div>
+                    </div>
+                    <div style="margin-top:10px;" class="row">
+                        <div style="padding-top:10px;" class="col-sm-3"><label></label></div>
+                        <div class="col-sm-8">
+                            <button class="btn btn-primary btn-sm">Send Message</button>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="col-sm-5">
+
+                    <div class="serv address-margin">
+
+                        <h2 style="margin-top:10px;">Scan QR Code</h2>
+
+                        <img style = "height: 250px;" src="assets/images/qrcode/qrcode.jpeg" class="img-fluid" alt="QR Code">
+
+                        <!-- Website:www.smarteyeapps.com.com<br> -->
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <!--  ************************* Footer Starts Here ************************** -->
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <h2>About Us</h2>
+                    <p class="no-indent">
+                        Suhani Memorial Trust is a non governmental organization which is registered under NITI Aayog.
+                    </p>
+                    <p class="no-indent">Reg. No: 400 / 2020-21</p>
+
+                    <form action = "donate.html">
+                        <button style = "margin-top: 20px;
+                        border-radius: 25px;
+                        width: 100px;" class="btn btn-sm btn-default">Donate</button>
+                        </form>
+                </div>
+                <!-- <div class="col-md-4 col-sm-12">
+                <h2>Useful Links</h2>
+                <ul class="list-unstyled link-list">
+                    <li><a ui-sref="about" href="#/about">About us</a><i class="fa fa-angle-right"></i></li>
+                    <li><a ui-sref="portfolio" href="#/portfolio">Portfolio</a><i class="fa fa-angle-right"></i></li>
+                    <li><a ui-sref="products" href="#/products">Latest jobs</a><i class="fa fa-angle-right"></i></li>
+                    <li><a ui-sref="gallery" href="#/gallery">Gallery</a><i class="fa fa-angle-right"></i></li>
+                    <li><a ui-sref="contact" href="#/contact">Contact us</a><i class="fa fa-angle-right"></i></li>
+                </ul>
+            </div> -->
+                <div class="col-md-6 col-sm-12 map-img footer-text-align">
+                    <h2>Contact Us</h2>
+                    <address class="md-margin-bottom-40">
+                        J-35, <br>
+                        Gangaram Vatika<br>
+                        Tilak Nagar, New Delhi 18<br>
+                        Phone:+91 9911964701<br>
+                        Email: <a href="mailto:suhanimemorialtrust@gmail.com">suhanimemorialtrust@gmail.com</a></a><br>
+                    </address>
+
+                </div>
+            </div>
+
+
+            <!-- <div class="nav-box row clearfix">
+            <div class="inner col-md-9 clearfix">
+                <ul class="footer-nav clearfix">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Servies</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+              
+            </div>
+              <div class="donate-link col-md-3"><a href="donate.html" class="btn btn-primary "><span class="btn-title">Donate Now</span></a></div>
+        </div> -->
+
+        </div>
+
+
+    </footer>
+    <div class="copy">
+        <div class="container">
+            <a>2021 &copy; All Rights Reserved</a>
+
+            <span>
+                <!-- <a><i class="fab fa-github"></i></a>
+            <a><i class="fab fa-google-plus-g"></i></a>
+            <a><i class="fab fa-pinterest-p"></i></a>
+            <a><i class="fab fa-twitter"></i></a>
+            <a><i class="fab fa-facebook-f"></i></a> -->
+            </span>
+        </div>
+
+    </div>
+
+
+</body>
+
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
+<script src="assets/plugins/slider/js/owl.carousel.min.js"></script>
+<script src="assets/js/script.js"></script>
+
+</html>
