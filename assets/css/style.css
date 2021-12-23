@@ -929,3 +929,14 @@ blockquote p::after {
   height:350px;
  }
 }
+
+.btn-orange {
+  color: #fff;
+  background-color: #f6851e;
+  border-color: #f6851e;
+  padding: 5px 23px;
+  margin-top: 10px;
+  border-radius: 8px;
+  line-height: 2.2;
+  font-size: 16px;
+}
